@@ -56,6 +56,7 @@
 		62D667D21845F8A40046D5D5 /* CCHMapClusterControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D667CB1845F8A40046D5D5 /* CCHMapClusterControllerUtils.m */; };
 		62D667D41845F8A40046D5D5 /* CCHMapViewDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D667CD1845F8A40046D5D5 /* CCHMapViewDelegateProxy.m */; };
 		62D71E11187EB45500E52EE3 /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D71E10187EB45500E52EE3 /* ClusterAnnotationView.m */; };
+		853212801C916A6000B5CB29 /* DataInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8532127F1C916A5F00B5CB29 /* DataInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		62D667CD1845F8A40046D5D5 /* CCHMapViewDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHMapViewDelegateProxy.m; sourceTree = "<group>"; };
 		62D71E0F187EB45500E52EE3 /* ClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotationView.h; sourceTree = "<group>"; };
 		62D71E10187EB45500E52EE3 /* ClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotationView.m; sourceTree = "<group>"; };
+		8532127E1C916A5F00B5CB29 /* DataInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataInfoView.h; sourceTree = "<group>"; };
+		8532127F1C916A5F00B5CB29 /* DataInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +267,8 @@
 				621834EC18A6AD25000210AF /* Settings.m */,
 				62D71E0F187EB45500E52EE3 /* ClusterAnnotationView.h */,
 				62D71E10187EB45500E52EE3 /* ClusterAnnotationView.m */,
+				8532127E1C916A5F00B5CB29 /* DataInfoView.h */,
+				8532127F1C916A5F00B5CB29 /* DataInfoView.m */,
 				62D667BC1845F76F0046D5D5 /* DataReader.h */,
 				62D667BD1845F76F0046D5D5 /* DataReader.m */,
 				62D667BE1845F76F0046D5D5 /* DataReaderDelegate.h */,
@@ -396,7 +401,7 @@
 				ORGANIZATIONNAME = "Claus Höfele";
 				TargetAttributes = {
 					62D6677E1845E0F20046D5D5 = {
-						DevelopmentTeam = KN32D96YCR;
+						DevelopmentTeam = LCJ4B5EHS7;
 					};
 					62D6679F1845E0F20046D5D5 = {
 						TestTargetID = 62D6677E1845E0F20046D5D5;
@@ -469,6 +474,7 @@
 				6222E32918BA61290045A528 /* CCHMapClusterControllerDebugPolygon.m in Sources */,
 				62D667CE1845F8A40046D5D5 /* CCHMapClusterAnnotation.m in Sources */,
 				4869F183184FC4CC00251ADC /* CCHNearCenterMapClusterer.m in Sources */,
+				853212801C916A6000B5CB29 /* DataInfoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +623,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCHMapClusterController Example iOS/CCHMapClusterController Example iOS-Prefix.pch";
 				INFOPLIST_FILE = "CCHMapClusterController Example iOS/CCHMapClusterController Example iOS-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.claushoefele.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbc.iqxuat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -635,7 +641,7 @@
 				GCC_PREFIX_HEADER = "CCHMapClusterController Example iOS/CCHMapClusterController Example iOS-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "CCHMapClusterController Example iOS/CCHMapClusterController Example iOS-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.claushoefele.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbc.iqxuat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

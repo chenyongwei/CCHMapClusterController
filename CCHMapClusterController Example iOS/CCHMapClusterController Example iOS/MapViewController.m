@@ -13,6 +13,7 @@
 #import "ClusterAnnotationView.h"
 #import "SettingsViewController.h"
 #import "Settings.h"
+#import "DataInfoView.h"
 
 #import "CCHMapClusterAnnotation.h"
 #import "CCHMapClusterController.h"
@@ -32,6 +33,7 @@
 @property (nonatomic) NSUInteger count;
 @property (nonatomic) id<CCHMapClusterer> mapClusterer;
 @property (nonatomic) id<CCHMapAnimator> mapAnimator;
+@property (nonatomic) DataInfoView *infoView;
 
 @end
 
@@ -57,6 +59,10 @@
 
     // Settings
     [self resetSettings];
+    
+    // Add DataInfoView
+    self.infoView = [[DataInfoView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame), CGRectGetWidth(self.view.frame), 50)];
+    [self.view addSubview:self.infoView];
 }
 
 - (IBAction)resetSettings
@@ -190,6 +196,25 @@
     }
     
     return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+//    [mapView deselectAnnotation:view.annotation animated:YES];
+    NSLog(@"annotation view was selected");
+    self.infoView.frame = CGRectMake(self.infoView.frame.origin.x, self.infoView.frame.origin.y - CGRectGetHeight(self.infoView.frame), CGRectGetWidth(self.infoView.frame), CGRectGetHeight(self.infoView.frame));
+    
+    MKMapRect r = [mapView visibleMapRect];
+    MKMapPoint pt = MKMapPointForCoordinate([view.annotation coordinate]);
+    r.origin.x = pt.x - r.size.width * 0.5;
+    r.origin.y = pt.y - r.size.height * 0.5;
+    [mapView setVisibleMapRect:r animated:YES];
+}
+
+-(void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
+{
+    NSLog(@"annotation view was didDesletecd");
+    self.infoView.frame = CGRectMake(self.infoView.frame.origin.x, self.infoView.frame.origin.y + CGRectGetHeight(self.infoView.frame), CGRectGetWidth(self.infoView.frame), CGRectGetHeight(self.infoView.frame));
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
